@@ -1,0 +1,34 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Subscription Type by Gender",
+  "width": 1000,
+  "height": 400,
+  "data": {
+    "values": [
+      {"Gender": "Female", "Subscription Type": "Basic", "Count": 512},
+      {"Gender": "Female", "Subscription Type": "Premium", "Count": 364},
+      {"Gender": "Female", "Subscription Type": "Standard", "Count": 381},
+      {"Gender": "Male", "Subscription Type": "Basic", "Count": 487},
+      {"Gender": "Male", "Subscription Type": "Premium", "Count": 369},
+      {"Gender": "Male", "Subscription Type": "Standard", "Count": 387}
+    ]
+  },
+  "mark": {"type": "bar", "size": 40, "tooltip": true},
+  "encoding": {
+    "x": {
+      "field": "Subscription Type",
+      "type": "nominal",
+      "axis": {"labelAngle": 0}
+    },
+    "y": {"field": "Count", "type": "quantitative"},
+    "color": {
+      "field": "Gender",
+      "type": "nominal",
+      "scale": {"domain": ["Female", "Male"], "range": ["#FF69B4", "#228B22"]}
+    }
+  },
+  "config": {
+    "axis": {"titleFontSize": 14, "labelFontSize": 12},
+    "legend": {"titleFontSize": 14, "labelFontSize": 12}
+  }
+}
