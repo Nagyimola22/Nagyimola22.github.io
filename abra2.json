@@ -1,10 +1,17 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Bar chart of subscription types in the Netflix dataset",
+ "width": 1000,
+  "height": 400,
   "data": {
     "url": "https://raw.githubusercontent.com/Imolanagy/nagyimola.github.io/main/Netflix%20Userbase.csv"
   },
-  "mark": "bar",
+ "mark": {
+    "type": "bar",
+    "size": 40,
+     "color": "black",
+    "tooltip": true  // Enable tooltip to show exact values
+  },
   "encoding": {
     "y": {
       "field": "Subscription Type",
@@ -15,7 +22,19 @@
       "aggregate": "count",
       "type": "quantitative",
       "axis": {"title": "Count"}
-    }
+    },
+    "tooltip": [
+      {"aggregate": "count", "type": "quantitative", "title": "Count"},
+      {"field": "Subscription Type", "type": "nominal", "title": "Subscription Type"}
+    ]
   },
-  "config": {}
+  "config": {
+    "view": {
+      "stroke": "transparent"
+    },
+    "axis": {
+      "labelFontSize": 12,
+      "titleFontSize": 14
+    }
+  }
 }
