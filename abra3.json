@@ -6,29 +6,7 @@
   "data": {
     "url": "https://raw.githubusercontent.com/Imolanagy/nagyimola.github.io/main/Netflix%20Userbase.csv"
   },
-  "mark": {"type": "bar", "size": 30, {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "description": "Interactive bar chart of subscription types in the Netflix dataset by Age",
-    "width": 1000,
-    "height": 400,
-    "data": {
-      "url": "https://raw.githubusercontent.com/Imolanagy/nagyimola.github.io/main/Netflix%20Userbase.csv"
-    },
-    "mark": {"type": "bar", "size": 30, "color": "firebrick"},
-    "encoding": {
-      "x": {"field": "Age", "type": "quantitative", "axis": {"title": "Age"}},
-      "y": {
-        "aggregate": "count",
-        "type": "quantitative",
-        "axis": {"title": "Count"}
-      },
-      "tooltip": [
-        {"aggregate": "count", "type": "quantitative", "title": "Count"},
-        {"field": "Age", "type": "quantitative", "title": "Age"}
-      ]
-    },
-    "config": {}
-  }},
+  "mark": {"type": "bar", "size": 30, "color": "firebrick"},
   "encoding": {
     "x": {"field": "Age", "type": "quantitative", "axis": {"title": "Age"}},
     "y": {
